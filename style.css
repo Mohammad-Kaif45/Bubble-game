@@ -1,40 +1,35 @@
-* {
+{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-html, body {
+html,body{
     width: 100%;
     height: 100%;
-    overflow-x: hidden;
 }
 
-#main {
+#main{
     justify-content: center;
     display: flex;
     align-items: center;
     height: 100%;
     width: 100%;
     background-color: rgb(128, 183, 128);
-    padding: 10px;
 }
 
-#panel {
+#panel{
     overflow: hidden;
     border-radius: 10px;
-    width: 90%;
-    max-width: 900px; /* Limits width on larger screens */
+    width: 80%;
     height: 90%;
     background-color: #fff;
-    display: flex;
-    flex-direction: column;
 }
 
-#ptop {
-    padding: 0px 10px; /* Adjusted padding */
-    justify-content: space-around;
+#ptop{
+    padding: 0px 25%;
+    justify-content: space-between;
     display: flex;
     align-items: center;
     color: #fff;
@@ -43,27 +38,26 @@ html, body {
     background-color: rgb(72, 104, 72);
 }
 
-.elem {
+.elem{
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
 }
 
-.elem h3 {
+.elem h2{
     font-weight: 500;
-    font-size: 18px;
+    font-size: 22px;
 }
-
-.box {
-    color: rgb(18, 119, 57);
-    font-size: 18px;
+.box{
+    color: rgb(18,119,57);
+    font-size: 20px;
     font-weight: 500;
     padding: 10px 15px;
     background-color: #fff;
     border-radius: 3px;
 }
 
-#pbtm {
+#pbtm{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
@@ -72,10 +66,9 @@ html, body {
     padding: 18px;
     height: calc(100% - 100px);
     width: 100%;
-    overflow-y: auto; /* For long screens */
 }
 
-.bubble {
+.bubble{
     color: #fff;
     display: flex;
     justify-content: center;
@@ -85,37 +78,9 @@ html, body {
     border-radius: 50%;
     background-color: rgb(55, 112, 55);
     font-weight: 500;
-    flex-shrink: 0; /* Prevents bubbles from shrinking */
 }
 
 .bubble:hover {
     cursor: pointer;
-    background-color: rgb(50, 75, 50);
-}
-
-/* Responsive Design */
-@media (max-width: 600px) {
-    #ptop {
-        flex-direction: column;
-        height: auto;
-        padding: 10px;
-    }
-
-    .elem h3 {
-        font-size: 16px;
-    }
-
-    .box {
-        font-size: 16px;
-        padding: 8px 12px;
-    }
-
-    .bubble {
-        height: 50px;
-        width: 50px;
-    }
-
-    #panel {
-        height: auto;
-    }
+    background-color: rgb(50,75,50);
 }
