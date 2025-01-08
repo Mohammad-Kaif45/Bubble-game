@@ -17,6 +17,7 @@ Click on the bubbles as they appear on the screen.
 Each bubble popped adds to your score.
 Try to pop as many as you can before the timer runs out!
 
+
 Play the Game:
 You can play the game directly on this link ("https://mohammadkaif.netlify.app/").
 
