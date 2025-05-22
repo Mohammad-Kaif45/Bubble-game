@@ -20,4 +20,6 @@ Try to pop as many as you can before the timer runs out!
 
 Play the Game:
 You can play the game directly on this link ("https://mohammadkaif.netlify.app/").
+![image](https://github.com/user-attachments/assets/3ab7bd54-adb6-4b6d-882b-3fb077a3ae47)
+
 
