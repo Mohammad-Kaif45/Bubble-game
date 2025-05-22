@@ -11,6 +11,9 @@ html, body {
 }
 
 #main {
+    position: fixed;
+    top: 0;
+    left: 0;
     justify-content: center;
     display: flex;
     align-items: center;
@@ -23,7 +26,9 @@ html, body {
     overflow: hidden;
     border-radius: 15px;
     width: 80%;
+    max-width: 1200px;
     height: 90%;
+    max-height: 800px;
     background-color: rgba(255, 255, 255, 0.95);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     position: relative;
@@ -83,6 +88,7 @@ html, body {
     height: calc(100% - 100px);
     width: 100%;
     position: relative;
+    overflow-y: auto;
 }
 
 .bubble {
@@ -143,6 +149,10 @@ html, body {
     transform: translate(-50%, -50%);
     text-align: center;
     animation: fadeIn 0.5s ease;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 .restart-btn {
@@ -175,10 +185,16 @@ html, body {
 }
 
 @media (max-width: 768px) {
+    #panel {
+        width: 95%;
+        height: 95%;
+    }
+    
     #ptop {
         padding: 0 10%;
         flex-wrap: wrap;
         height: auto;
+        min-height: 100px;
     }
     
     .elem {

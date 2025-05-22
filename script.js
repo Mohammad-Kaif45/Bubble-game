@@ -5,6 +5,7 @@ let highestScore = localStorage.getItem('highestScore') || 0;
 let level = 1;
 let isGameRunning = false;
 let soundEnabled = true;
+let timerInterval;
 
 // Create audio elements
 const popSound = new Audio('https://assets.mixkit.co/active_storage/sfx/2571/2571-preview.mp3');
@@ -12,6 +13,7 @@ const gameOverSound = new Audio('https://assets.mixkit.co/active_storage/sfx/143
 
 // Initialize the game
 function initGame() {
+    clearInterval(timerInterval);
     timer = 60;
     score = 0;
     level = 1;
@@ -41,7 +43,10 @@ function updateUI() {
 // Increase score with animation
 function increaseScore() {
     score += 10;
-    if (soundEnabled) popSound.play();
+    if (soundEnabled) {
+        popSound.currentTime = 0;
+        popSound.play().catch(e => console.log("Audio play failed:", e));
+    }
     
     // Check for level up
     if (score % 50 === 0) {
@@ -74,7 +79,7 @@ function getNewHit() {
 
 // Create bubbles with optional animation
 function makeBubble(animate = false) {
-    const bubbleCount = 84 - (level * 4); // Reduce bubbles as level increases
+    const bubbleCount = Math.max(20, 84 - (level * 4)); // Ensure minimum bubbles
     let clutter = "";
     
     for (let i = 1; i <= bubbleCount; i++) {
@@ -88,7 +93,8 @@ function makeBubble(animate = false) {
 
 // Timer function
 function runTimer() {
-    const timerInterval = setInterval(() => {
+    clearInterval(timerInterval);
+    timerInterval = setInterval(() => {
         if (timer > 0 && isGameRunning) {
             timer--;
             document.querySelector("#timerval").textContent = timer;
@@ -108,7 +114,12 @@ function runTimer() {
 // End game function
 function endGame() {
     isGameRunning = false;
-    if (soundEnabled) gameOverSound.play();
+    clearInterval(timerInterval);
+    
+    if (soundEnabled) {
+        gameOverSound.currentTime = 0;
+        gameOverSound.play().catch(e => console.log("Audio play failed:", e));
+    }
     
     const gameOverScreen = `
         <div class="game-over-screen">
@@ -143,4 +154,4 @@ document.addEventListener("keydown", function(event) {
 });
 
 // Initialize the game
-initGame();
+window.addEventListener('load', initGame);
