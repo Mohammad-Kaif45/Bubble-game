@@ -1,6 +1,6 @@
 Bubble Game
 A fun and interactive bubble game built using HTML, CSS, and JavaScript. In this game, the player clicks on floating bubbles to score points. The objective is to pop as many bubbles as possible before time runs out.
-
+ 
 Features:
 Interactive Gameplay: Click on bubbles to pop them and score points. 
 Timer: Players have a limited time to pop as many bubbles as possible.
