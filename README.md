@@ -5,7 +5,7 @@ Features:
 Interactive Gameplay: Click on bubbles to pop them and score points. 
 Timer: Players have a limited time to pop as many bubbles as possible.
 Responsive Design: The game works seamlessly on both desktop and mobile devices.
-Leaderboard: Displays the highest score, allowing players to compete for the best performance.
+Leaderboard: Displays the highest score, allowing players to compete for the best performance. 
  
 Technologies Used:
 HTML for structure
