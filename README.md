@@ -3,7 +3,7 @@ A fun and interactive bubble game built using HTML, CSS, and JavaScript. In this
  
 Features:
 Interactive Gameplay: Click on bubbles to pop them and score points. 
-Timer: Players have a limited time to pop as many bubbles as possible. 
+Timer: Players have a limited time to pop as many bubbles as possible.  
 Responsive Design: The game works seamlessly on both desktop and mobile devices.
 Leaderboard: Displays the highest score, allowing players to compete for the best performance. 
  
