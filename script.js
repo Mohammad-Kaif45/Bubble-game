@@ -3,7 +3,7 @@ let score = 0;
 let hitrn = 0;
 let highestScore = localStorage.getItem('highestScore') || 0;  
 let level = 1;
-let isGameRunning = false; 
+let isGameRunning = false;  
 let soundEnabled = true; 
 let timerInterval;
 
