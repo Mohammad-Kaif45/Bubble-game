@@ -6,7 +6,7 @@ let level = 1;
 let isGameRunning = false;  
 let soundEnabled = true;  
 let timerInterval;
-
+ 
 // Create audio elements
 const popSound = new Audio('https://assets.mixkit.co/active_storage/sfx/2571/2571-preview.mp3');
 const gameOverSound = new Audio('https://assets.mixkit.co/active_storage/sfx/1435/1435-preview.mp3');
